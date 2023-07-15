@@ -1,0 +1,60 @@
+//ion-header{
+    //position: absolute;
+//}
+//ion-toolbar{
+   // --background-color: transparent;
+    //--opacity: 0;
+//}
+//ion-content{
+    //--background-color: #E1EAF9;
+//}
+//.wrapform{
+  //  margin-top: 15px;
+//}
+//ion-item{
+  //    color: #74787E;
+    //--border-color: #d4d7db;
+    //--highlight-color-focused: #647890;
+    //--padding-start: 0;
+    
+      //font-size: 12px;
+    //ion-input{
+      //  color: #647890;
+    //}
+//}
+//.sign-btn-wrap{
+  //  text-align: center;
+    //padding-top: 20px;
+    //.sign-btn{
+      //  --ion-primary-color: #215AB7;
+        //color: #F4F6FA;
+    //}
+//}
+//ion-card{
+  //  --ion-background-color: transparent;
+    //box-shadow: none !important;
+//}
+
+
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+ion-content{
+    --ion-background-color: #fefefe;
+}
+.rasp{
+    height: 50px;
+    width: 50px;
+}
+.container {
+
+    margin: 20px;
+    max-width: 300px;
+    padding: 30px;
+    background-color: white;
+  }

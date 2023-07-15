@@ -1,0 +1,70 @@
+<ion-content>
+  <div class="flex-center">
+    <style>
+      div{
+        background-image: url('assets/images/hi.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+      }
+      </style>
+    <ion-card color="primary">
+      <ion-card-header>
+        <ion-card-title>Parental Control</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+       
+         <ion-list>
+          <div class="wrapform">
+            <ion-item>
+              <ion-label position="floating"><ion-icon name="person-circle-outline" size="size-md"></ion-icon> Username</ion-label>
+              <ion-input type="text" [(ngModel)]="username" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating"><ion-icon name="lock-closed-outline" size="size-md"></ion-icon> Password</ion-label>
+              <ion-input type="password" [(ngModel)]="password" required></ion-input>
+            </ion-item>
+            </div>
+          </ion-list>
+          <br>
+          <ion-button expand="full" (click)="login()" color="danger">Login</ion-button>  
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+
+
+<!--ion-header class="ion no boarder">
+  <ion-toolbar>
+    <ion-title>loginpage</ion-title>
+  </ion-toolbar>
+  <ion-button slot="start">
+    <ion-back-button defaultHref="login" text=""></ion-back-button>
+  </ion-button>
+</ion-header>
+
+<ion-content>
+  <ion-card class="ion-no-margin">
+    <ion-img src="assets/images/hi.jpg"></ion-img>
+
+  </ion-card>
+  <ion-card-content>
+    <div class="wrapform">
+      <ion-item>
+        <ion-icon name="person-circle-outline"></ion-icon>
+        
+        <ion-input type="text" [(ngModel)]="username" placeholder="Username" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        
+        <ion-input type="password" [(ngModel)]="password" placeholder="Password" required></ion-input>
+      </ion-item>
+    </div>
+    <div class="sign-btn-wrap">
+      <ion-button fill="solid" shape="round" class="sign-btn">Login</ion-button>
+    </div>
+  </ion-card-content>
+
+</ion-content-->

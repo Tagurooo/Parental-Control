@@ -1,0 +1,116 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-content>
+          <ion-item>
+            <ion-menu-toggle>
+              <ion-item routerLink="/device-info">
+                <ion-icon name = "information-circle-outline" slot="start"></ion-icon>
+                <ion-label>Device Information</ion-label>
+              </ion-item>
+              <ion-item routerLink="/network">
+                <ion-icon name = "git-network-outline" slot="start"></ion-icon>
+                <ion-label>Network</ion-label>
+              </ion-item>
+              <ion-item routerLink="/security">
+                <ion-icon name = "lock-open-outline" slot="start"></ion-icon>
+                <ion-label>Security</ion-label>
+              </ion-item>
+              <ion-item routerLink="/parental-control">
+                <ion-icon name = "people-circle-outline" slot="start"></ion-icon>
+                <ion-label>Parental Control</ion-label>
+              </ion-item>
+              <ion-item routerLink="/management">
+                <ion-icon name = "briefcase-outline" slot="start"></ion-icon>
+                <ion-label>Management</ion-label>
+              </ion-item>
+              <ion-item routerLink="/settings">
+                <ion-icon name = "settings-outline" slot="start"></ion-icon>
+                <ion-label>Settings</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-item>
+      </ion-content>
+    </ion-content>
+    
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar color="primary" class="justify-content-between">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="secondary">
+          <ion-button id="trigger-button">
+            <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+              <ion-popover trigger="trigger-button">
+              <ng-template>
+            <ion-content class="padding">
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>User Account</ion-card-title>
+                  <ion-card-subtitle>Username: Admin</ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-content>
+              </ng-template>
+            </ion-popover>
+          </ion-button>
+          <ion-button>
+            <ion-icon slot="icon-only" name="search"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+          <ion-button>
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+          </ion-button>
+          <ion-button [routerLink]="['/logout']" fill="outline">
+            Logout
+            <ion-icon slot="end" name="log-out"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title>Dashboard</ion-title>
+      
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> Status
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-sm="6" size-md="4" size-lg="6">
+            
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Device Information</ion-card-title>
+          <ion-card-subtitle>Displays basic information about your device.</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-img src="assets/images/device-info.png"></ion-img>
+        </ion-card-content>
+        <ion-button routerLink="/device-info" expand="full" >Open Device Info tab</ion-button>
+      </ion-card>
+          </ion-col>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Security Status</ion-card-title>
+          <ion-card-subtitle>Displays the current status of security.</ion-card-subtitle>
+        </ion-card-header>
+  
+        <ion-card-content>
+          <ion-img src="assets/images/security.png"></ion-img>
+        </ion-card-content>
+      
+        <ion-button routerLink="/security" expand="full">Open Security tab</ion-button>
+      </ion-card>
+     </ion-row>
+    </ion-grid>
+  </ion-content>
+</div>
+</ion-app>

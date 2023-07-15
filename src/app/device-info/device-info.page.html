@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button routerLink="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Raspberry Pi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card color="light" class="card">
+      <ion-card-header>
+        <ion-card-title>Device Information</ion-card-title>
+        <ion-card-subtitle>On this page, you can view basic device information.</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+    <div class="container">
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="fname">Software Version:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="fname">RP2615</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="lname">Hardware Version:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">2.134.285F1A</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">Device Model:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">AN5506_04F1A</ion-label>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <ion-label for="country">Device Description:</ion-label>
+            </div>
+            <div class="col-75">
+              <ion-label for="lname">GPON</ion-label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">ONU State:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">05(STATE-OPERATION)</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">ONU Regist State:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">OK</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">LOID:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">fiberhome</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">CPU Usage:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">2.69%</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">Memory Usage:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">41.79%</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">Web Server Port:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">80</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="country">System Uptime:</ion-label>
+          </div>
+          <div class="col-75">
+            <ion-label for="lname">25 d 17 h 40 m 50 s</ion-label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <ion-label for="subject">Device Alias</ion-label>
+          </div>
+          <div class="col-25">
+            <textarea id="subject" name="subject" placeholder="" style="height:25px; width:300px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          
+          <ion-button size="default" color="success" type="submit" id="present-alert">Apply</ion-button>
+          <ion-alert
+          trigger="present-alert"
+          header="Pending Changes"
+          message="Do you want to save changes?"
+          [buttons]="alertButtons"
+        ></ion-alert>
+        <!--p>{{ handlerMessage }}</p-->
+        </div>
+      </div>
+    </ion-card>
+</ion-content>
