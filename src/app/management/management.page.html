@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button routerLink="/home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Management</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-card color="light" class="card">
+      <ion-card-header>
+        <ion-card-title>Account and Device Management</ion-card-title>
+        <ion-card-subtitle>You could manage your user account, admin credentials via management. The device management can also be configured in this page.</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <form class="form-inline">
+        
+        <label style="width: 100%;">
+          <label for="text">Username:*</label>
+          <input type="text" placeholder="Admin">
+            <!--input type="checkbox" name="remember"> Remember me
+          <button type="submit">Submit</button-->
+        </label>
+      </form>
+      <form class="form-inline">
+        
+        <label style="width: 100%;">
+          <label for="text">Old Password:*</label>
+          <input type="password" placeholder="">
+            <!--input type="checkbox" name="remember"> Remember me
+          <button type="submit">Submit</button-->
+        </label>
+      </form>
+      <form class="form-inline">
+        
+        <label style="width: 100%;">
+          <label for="text">New Password:*</label>
+          <input type="password" placeholder="">
+            <!--input type="checkbox" name="remember"> Remember me
+          <button type="submit">Submit</button-->
+        </label>
+      </form>
+      <form class="form-inline">
+        
+        <label style="width: 100%;">
+          <label for="text">Confirm Password:*</label>
+          <input type="password" placeholder="">
+            <!--input type="checkbox" name="remember"> Remember me
+          <button type="submit">Submit</button-->
+        </label>
+        
+      </form>
+      <ion-button type="submit"  id="present-alert">Apply</ion-button>
+      <ion-alert
+            trigger="present-alert"
+            header="Pending Changes"
+            message="Do you want to save changes?"
+            [buttons]="alertButtons"
+          ></ion-alert>
+    </ion-card>
+    <br>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-subtitle color="dark">You may restore all device configuration.</ion-card-subtitle>
+        <!--ion-card-subtitle>If the firewall is enable, the rules take effect, then Blocking the MAC address to get the DHCP.</ion-card-subtitle-->
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <ion-card-subtitle color="dark">Please be advised that once you Reset it will automatically Restore the default configuration settings and it will delete the previous settings.</ion-card-subtitle>
+      <br>
+      <ion-button size="small" type="button" id="open-loading">Reset</ion-button>
+      <ion-loading class="custom-loading" trigger="open-loading" message="Loading..." [duration]="1000"></ion-loading>
+    </ion-card>
+  </ion-content>
+  
