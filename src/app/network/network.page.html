@@ -1,1 +1,279 @@
-sdfsfsfsdf
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button routerLink="/home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Network</ion-title>
+      <h5 slot="end">{{ currentDate | date: 'medium' }}</h5>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    
+    <ion-card color="light" class="card">
+      <ion-card-header>
+        <ion-card-subtitle>LAN Settings</ion-card-subtitle>
+        <ion-card-subtitle>You could configure the minimum number of Wireless settings for comunication, such as Channel. The Access Point can be set simply with only the minimum settings items.</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    
+  
+    <!--ion-card color="dark">
+    
+      <ion-row>
+      <ion-col size="6">
+      <ion-item color="medium">
+        <ion-select
+          class="always-flip"
+          toggleIcon="caret-down-sharp"
+          interface="popover"
+          label="Network Mode"
+          placeholder="Select"
+        >
+          <ion-select-option value="network">802.11b 4G</ion-select-option>
+          <ion-select-option value="network1">802.11g 4G</ion-select-option>
+          <ion-select-option value="network2">802.11n 4G</ion-select-option>
+          <ion-select-option value="network3">802.11b/g/n 4G Mixed</ion-select-option>
+          <ion-select-option value="network4">802.11a 5G</ion-select-option>
+          <ion-select-option value="network5">802.11ac 5G</ion-select-option>
+          <ion-select-option value="network6">802.11a/ac 5G Mixed</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item color="medium">
+        <ion-select
+          class="always-flip"
+          toggleIcon="caret-down-sharp"
+          interface="popover"
+          label="Network Bandwidth"
+          placeholder="Select"
+        >
+        <ion-select-option value="networkbandwidth">20mhz</ion-select-option>
+        <ion-select-option value="networkbandwidth1">40mhz</ion-select-option>
+        <ion-select-option value="networkbandwidth2">20mhz/40mhz</ion-select-option>
+        <ion-select-option value="networkbandwidth3">80mhz</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+      </ion-row>
+      <ion-row>
+    <ion-col size="6">
+      <ion-item color="medium">
+        <ion-select
+          class="always-flip"
+          toggleIcon="caret-down-sharp"
+          interface="popover"
+          label="Network Channel"
+          placeholder="Select"
+        >
+        <ion-select-option value="networkchannel">Auto</ion-select-option>
+        <ion-select-option value="networkchannel1">Channel 1-10</ion-select-option>
+        <ion-select-option value="networkchannel2">Channel 10-20</ion-select-option>
+        <ion-select-option value="networkchannel3">Channel 20-30</ion-select-option>
+        <ion-select-option value="networkchannel4">Channel 30-40</ion-select-option>
+        <ion-select-option value="networkchannel5">Channel 40-50</ion-select-option>
+        <ion-select-option value="networkchannel6">Channel 50-60</ion-select-option>
+        <ion-select-option value="networkchannel7">Channel 60-70</ion-select-option>
+        <ion-select-option value="networkchannel8">Channel 70-80</ion-select-option>
+        <ion-select-option value="networkchannel9">Channel 80-90</ion-select-option>
+        <ion-select-option value="networkchannel10">Channel 90-100+</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    
+  <ion-col size="6">
+      <ion-item color="medium">
+        <div class="row">
+          <div class="col-15">
+            <ion-label for="lname">Enable Wireless</ion-label>
+          </div>
+        </div>
+        <div> 
+        <ion-checkbox ></ion-checkbox>
+      </div>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  </ion-card-->
+    <ion-card>
+      <form class="form-inline">
+        
+        <label style="width: 100%;">
+          <label for="text">Lan Interface:</label>
+          <input type="text" placeholder="192.168.254.254">
+            <!--input type="checkbox" name="remember"> Remember me
+          <button type="submit">Submit</button-->
+        </label>
+      </form>
+      <form class="form-inline">
+        
+        <label style="width: 100%;">
+          <label for="text">Subnet Mask:</label>
+          <input type="text" placeholder="255.255.255.0">
+            <!--input type="checkbox" name="remember"> Remember me
+          <button type="submit">Submit</button-->
+        </label>
+        <button type="submit" style="width: 100%;" id="present-alert">Apply</button>
+      <ion-alert
+            trigger="present-alert"
+            header="Pending Changes"
+            message="Do you want to save changes?"
+            [buttons]="alertButtons"
+          ></ion-alert>
+      </form>
+    </ion-card>
+    <br>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-subtitle color="dark">DHCP Filtering</ion-card-subtitle>
+        <!--ion-card-subtitle>If the firewall is enable, the rules take effect, then Blocking the MAC address to get the DHCP.</ion-card-subtitle-->
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="center">
+      <form class="form-inline">
+        <label for="text">DHCP Filtering Enable:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="custom" aria-label="Custom checkbox">Enable</ion-radio>
+            <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked">Disable</ion-radio>
+          </ion-radio-group>
+        
+        </label>
+        <!--button type="submit">Apply</button-->
+      </form>
+    </ion-card>
+    <ion-card>
+      <form class="form-inline">
+        <label for="text">DHCP Blacklist/Whitelist:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="custom" aria-label="">Whitelist</ion-radio>
+            <ion-radio value="custom-checked" aria-label="">Blacklist</ion-radio>
+          </ion-radio-group>
+        </label>
+        <!--ion-button style="width: 100%;" size="small" type="button" onclick="alert('Successfully Apply')">Apply</ion-button-->
+        <ion-button style="width: 100%;" size="small" type="button" id="open-loading">Apply</ion-button>
+        <ion-loading class="custom-loading" trigger="open-loading" message="Loading..." [duration]="1000"></ion-loading>
+      </form>
+    </ion-card>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-subtitle color="dark">DHCP Filtering Table</ion-card-subtitle>
+        <!--ion-card-subtitle>If the firewall is enable, the rules take effect, then Blocking the MAC address to get the DHCP.</ion-card-subtitle-->
+      </ion-card-header>
+    </ion-card>
+    <!--ion-card>
+    <ion-item-divider>
+      <ion-label> Item Divider </ion-label>
+    </ion-item-divider>
+    </ion-card-->
+    <ion-card>
+      <form>
+        <ion-button slot="end" size="small" type="button" onclick="alert('Added Successfully')">Add</ion-button>
+        <ion-button slot="end" size="small" type="button" onclick="alert('Deleted Successfully')">Delete</ion-button>
+      </form>
+      <table style="width:100%" >
+        <tr>
+          <th style="width:10%">ID</th>
+          <th>MAC Address</th>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+      </table>
+    </ion-card>
+    <br>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-subtitle color="dark">If the firewall is enable, the rules take effect, then the IPV6 MAC addresses matching the filter rules will be banned.</ion-card-subtitle>
+        <!--ion-card-subtitle>If the firewall is enable, the rules take effect, then Blocking the MAC address to get the DHCP.</ion-card-subtitle-->
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="center">
+      <form class="form-inline">
+        <label for="text">IPV6 MAC Filtering Enable:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="custom" aria-label="Custom checkbox">Enable</ion-radio>
+            <ion-radio value="custom-checked" aria-label="Custom checkbox that is checked">Disable</ion-radio>
+          </ion-radio-group>
+        
+        </label>
+        <!--button type="submit">Apply</button-->
+      </form>
+    </ion-card>
+    <ion-card>
+      <form class="form-inline">
+        <label for="text">IPV6 MAC Blacklist/Whitelist:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="custom" aria-label="">Whitelist</ion-radio>
+            <ion-radio value="custom-checked" aria-label="">Blacklist</ion-radio>
+          </ion-radio-group>
+        </label>
+        <ion-button style="width: 100%;" size="small" type="button" id="loading">Apply</ion-button>
+        <ion-loading class="custom-loading" trigger="loading" message="Loading..." [duration]="1000"></ion-loading>
+      </form>
+    </ion-card>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-subtitle color="dark">MAC Filtering Table</ion-card-subtitle>
+        <!--ion-card-subtitle>If the firewall is enable, the rules take effect, then Blocking the MAC address to get the DHCP.</ion-card-subtitle-->
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <form>
+        <ion-button slot="end" size="small" type="button" onclick="alert('Added Successfully')">Add</ion-button>
+        <ion-button slot="end" size="small" type="button" onclick="alert('Deleted Successfully')">Delete</ion-button>
+      </form>
+      <table style="width:100%" >
+        <tr>
+          <th style="width:10%">ID</th>
+          <th>MAC Address</th>
+          <th>Time</th>
+          <th>Enable</th>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+      </table>
+    </ion-card>
+    <br>
+    <ion-card class="card">
+      <ion-card-header>
+        <ion-card-subtitle color="dark">You could Anti Port Scan enable/disable here.</ion-card-subtitle>
+        <!--ion-card-subtitle>If the firewall is enable, the rules take effect, then Blocking the MAC address to get the DHCP.</ion-card-subtitle-->
+      </ion-card-header>
+    </ion-card>
+    <ion-card class="center">
+      <form class="form-inline">
+        <label for="text">Anti Port Scan:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="custom-checked" aria-label="Custom checkbox">Enable</ion-radio>
+            <ion-radio value="custom" aria-label="Custom checkbox that is checked">Disable</ion-radio>
+          </ion-radio-group>
+        </label>
+        <ion-button style="width: 100%;" size="small" type="button" id="loadin">Apply</ion-button>
+        <ion-loading class="custom-loading" trigger="loadin" message="Loading..." [duration]="1000"></ion-loading>
+      </form>
+    </ion-card>
+  </ion-content>
+  
+  
+    
