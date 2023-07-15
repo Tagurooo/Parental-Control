@@ -1,0 +1,104 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button routerLink="/home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Parental Control</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-card color="light" class="card">
+      <ion-card-header>
+        <ion-card-title></ion-card-title>
+        <ion-card-subtitle>On this page, you can configure parental control with time management fof LAN and WLAN.</ion-card-subtitle>
+        <ion-card-subtitle>Note: Enable or disable any SSID on the configuration web may lead to reconnection of all the SSIDs.</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <form class="form-inline">
+      <ion-radio-group value="custom-checked">
+        <ion-radio value="custom" aria-label="Custom checkbox">Enable Parental Control:</ion-radio>
+      </ion-radio-group>
+    </form>
+    </ion-card>
+    <ion-card>
+        <ion-label for="email">Select a Date:</ion-label>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+  
+          <ion-modal [keepContentsMounted]="true">
+            <ng-template>
+              <ion-datetime id="datetime"></ion-datetime>
+            </ng-template>
+          </ion-modal>
+    </ion-card>
+    <ion-card>
+      <form class="form-inline">
+        <label style="width: 100%;">
+        <label for="appt">Start time:</label>
+        <input type="time" id="appt" name="appt">
+      </label>
+        
+      </form>
+      <form class="form-inline">
+        <label style="width: 100%;">
+        <label for="appt">End time:</label>
+        <input type="time" id="appt" name="appt">
+      </label>
+        
+      </form>
+    </ion-card>
+    <ion-card class="center">
+      <form class="form-inline">
+        <label for="email">LAN Binding:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="dsd" aria-label="">LAN 1</ion-radio>
+            <ion-radio value="sdsd" aria-label="">LAN 2</ion-radio>
+            <ion-radio value="custom" aria-label="Custom checkbox">LAN 3</ion-radio>
+            <ion-radio value="cu" aria-label="Custom checkbox that is checked">LAN 4</ion-radio>
+          </ion-radio-group>
+        
+        </label>
+        <!--button type="submit">Apply</button-->
+      </form>
+    </ion-card>
+    <ion-card class="center">
+      <form class="form-inline">
+        <label for="email">4G SSID Binding:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="dsd" aria-label="">SSID 1</ion-radio>
+            <ion-radio value="sdsd" aria-label="">SSID 2</ion-radio>
+            <ion-radio value="custom" aria-label="Custom checkbox">SSID 3</ion-radio>
+            <ion-radio value="cust" aria-label="Custom checkbox that is checked">SSID 4</ion-radio>
+          </ion-radio-group>
+        
+        </label>
+        <!--button type="submit">Apply</button-->
+      </form>
+    </ion-card>
+    <ion-card class="center">
+      <form class="form-inline">
+        <label for="email">5G SSID Binding:</label>
+        <label style="width:100%">
+          <ion-radio-group value="custom-checked">
+            <ion-radio value="dsd" aria-label="">SSID 1</ion-radio>
+            <ion-radio value="sdsd" aria-label="">SSID 2</ion-radio>
+            <ion-radio value="custom" aria-label="Custom checkbox">SSID 3</ion-radio>
+            <ion-radio value="cu" aria-label="Custom checkbox that is checked">SSID 4</ion-radio>
+          </ion-radio-group>
+        
+        </label>
+        <!--button type="submit">Apply</button-->
+        <button type="submit" style="width: 100%;" id="present-alert">Apply</button>
+      <ion-alert
+            trigger="present-alert"
+            header="Pending Changes"
+            message="Do you want to save changes?"
+            [buttons]="alertButtons"
+          ></ion-alert>
+      </form>
+    </ion-card>
+  </ion-content>
+  
